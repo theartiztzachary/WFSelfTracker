@@ -1,4 +1,5 @@
-import wfability, mod, modslot, arcane, commonattributes
+import wfability, modslot, arcane
+
 
 class Warframe:
 
