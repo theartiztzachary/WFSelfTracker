@@ -1,3 +1,4 @@
+import faulthandler
 from tkinter import *
 from tkinter import ttk
 from commonattributes import Commonattributes
@@ -5,6 +6,8 @@ from commonmethods import Commonmethods
 from Pages.startpage import Startpage
 
 def main():
+    faulthandler.enable() # : ^ )
+
     # create a Commonattributes object, responsible for holding global variables THIS SPECIFIC ONE MUST BE PASSED
     # AROUND IF NEEDED
     common_attributes_object = Commonattributes()
