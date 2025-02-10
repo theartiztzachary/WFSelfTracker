@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b481d061-e9dc-4e5f-a4a8-973e31859da2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/jsgrabber.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quicktests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/WFSelfTracker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WFSelfTracker.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/startpage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/startpage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commonmethods.py" beforeDir="false" afterPath="$PROJECT_DIR$/commonmethods.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +60,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "C:/Users/Yeyian PC/AppData/Roaming/JetBrains/PyCharm2024.3/node/versions/22.13.1/node",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable",
     "vue.rearranger.settings.migration": "true"
@@ -92,7 +89,6 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.13 (WFSelfTracker)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -131,6 +127,7 @@
       <updated>1738451017664</updated>
       <workItem from="1739117164868" duration="142000" />
       <workItem from="1739118147757" duration="18866000" />
+      <workItem from="1739209940603" duration="2067000" />
     </task>
     <servers />
   </component>
@@ -139,7 +136,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/WFSelfTracker$commonmethods.coverage" NAME="commonmethods Coverage Results" MODIFIED="1739131550654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/WFSelfTracker$main.coverage" NAME="main Coverage Results" MODIFIED="1739138093814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/WFSelfTracker$main.coverage" NAME="main Coverage Results" MODIFIED="1739212266987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/WFSelfTracker$quicktests.coverage" NAME="quicktests Coverage Results" MODIFIED="1739130860599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

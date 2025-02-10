@@ -36,8 +36,8 @@ class Commonmethods:
             print('Data type of jsgrabber: ' + str(type(jsgrabber)))
             data = await jsgrabber.findAnItem('/Lotus/Powersuits/Excalibur/ExcaliburPrime')
             print('Successfully got data from findAnItem.')
-            print("This is the unparsed data:" + data)
+            print("This is the unparsed data:" + str(data))
             parsed_data = json.loads(data)
-            print("This is the parsed data:" + parsed_data)
+            print("This is the parsed data:" + str(parsed_data))
         except Exception as error:
-            print('Something went wrong :<' + str(error))
+            print('Something went wrong :< - ' + str(error))
