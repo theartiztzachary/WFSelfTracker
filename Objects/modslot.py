@@ -1,4 +1,4 @@
-import mod
+from Objects import mod
 
 class Modslot:
 

@@ -1,4 +1,4 @@
-import wfability, modslot, arcane
+from Objects import wfability, modslot, arcane
 
 
 class Warframe:
