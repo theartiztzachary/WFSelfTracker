@@ -38,6 +38,6 @@ class Commonmethods:
             print('Successfully got data from findAnItem.')
             print("This is the unparsed data:" + str(data))
             parsed_data = json.loads(data)
-            print("This is the parsed data:" + str(parsed_data))
+            print("This is the parsed data: " + str(parsed_data))
         except Exception as error:
             print('Something went wrong :< - ' + str(error))
