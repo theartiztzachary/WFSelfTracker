@@ -1,4 +1,7 @@
 import json
+import pickle
+import os
+import Objects.tenno
 from pythonmonkey import require
 from commonattributes import Commonattributes
 
@@ -41,3 +44,26 @@ class Commonmethods:
             print("This is the parsed data: " + str(parsed_data))
         except Exception as error:
             print('Something went wrong :< - ' + str(error))
+
+    def writeFile(self, user_profile: Objects.tenno.Tenno):
+        try:
+            up_file = open('user_profile_file', 'wb')
+            pickle.dump(user_profile, up_file)
+            up_file.close()
+        except Exception as error:
+            print(f"Error in writing file: {error}")
+
+    def loadFile(self) -> Objects.tenno.Tenno:
+        try:
+            up_file = open('user_profile_file', 'rb')
+            user_profile = pickle.load(up_file)
+            up_file.close()
+            return user_profile
+        except Exception as error:
+            print(f"Error in loading file: {error}")
+
+    def deleteFile(self):
+        if os.path.isfile('user_profile_file'):
+            os.remove('user_profile_file')
+        else:
+            print("User file does not exist.")
