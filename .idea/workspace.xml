@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b481d061-e9dc-4e5f-a4a8-973e31859da2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Objects/modslot.py" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/modslot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Objects/tenno.py" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/tenno.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Objects/warframe.py" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/warframe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/homepage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/homepage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pages/startpage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/startpage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commonattributes.py" beforeDir="false" afterPath="$PROJECT_DIR$/commonattributes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commonmethods.py" beforeDir="false" afterPath="$PROJECT_DIR$/commonmethods.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +51,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "file__saving",
+    "git-widget-placeholder": "ui-skeleton",
     "ignore.virus.scanning.warn.message": "true",
     "javascript.nodejs.core.library.configured.version": "22.13.1",
     "javascript.nodejs.core.library.typings.version": "22.13.1",
@@ -132,6 +129,7 @@
       <workItem from="1739118147757" duration="18866000" />
       <workItem from="1739209940603" duration="2882000" />
       <workItem from="1739290962168" duration="16860000" />
+      <workItem from="1739318835152" duration="1943000" />
     </task>
     <servers />
   </component>

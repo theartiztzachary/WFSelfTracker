@@ -17,7 +17,8 @@ class Commonmethods:
         from Pages.startpage import Startpage
         from Pages.pageone import Pageone
         from Pages.pagetwo import Pagetwo
-        for P in (Startpage, Pageone, Pagetwo):
+        from Pages.homepage import Homepage
+        for P in (Startpage, Pageone, Pagetwo, Homepage):
             page = P(parent, self.common_attributes_object)
             self.common_attributes_object.pages.update({P : page})
 

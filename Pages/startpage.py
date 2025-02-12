@@ -28,9 +28,12 @@ class Startpage:
 
         from Pages.pageone import Pageone
         from Pages.pagetwo import Pagetwo
+        from Pages.homepage import Homepage
 
         ttk.Button(self.mainframe, text = "Go to Page One", command = lambda: self.common_methods_object.changePage(
             self.common_attributes_object.pages[Pageone])).grid(column = 1, row = 2, sticky = W)
+        ttk.Button(self.mainframe, text = "Go to Home Page", command = lambda: self.common_methods_object.changePage(
+            self.common_attributes_object.pages[Homepage])).grid(column = 2, row = 2, sticky = S)
         ttk.Button(self.mainframe, text = "Go to Page Two", command = lambda: self.common_methods_object.changePage(
             self.common_attributes_object.pages[Pagetwo])).grid(column = 3, row = 2, sticky = E)
 
