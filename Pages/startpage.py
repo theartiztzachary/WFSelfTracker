@@ -52,7 +52,7 @@ class Startpage:
         warframe_abilities_label.grid(column = 2, row = 5, sticky = W)
 
         ttk.Button(self.mainframe, text = 'Test Find', command = lambda: asyncio.run(
-            self.common_methods_object.parseTest())).grid(column = 1, row = 6, sticky = W)
+            self.common_methods_object.parseTest3())).grid(column = 1, row = 6, sticky = W)
 
         ttk.Button(self.mainframe, text = 'Create User', command = lambda: self.createTenno()).grid(
             column = 1, row = 7, sticky = W)

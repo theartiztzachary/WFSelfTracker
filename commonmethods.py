@@ -1,11 +1,7 @@
-import json
-import pickle
-import os
-import Objects.tenno
+import json, pickle, os, subprocess
+from Objects import tenno
 from pythonmonkey import require
 from tkinter import *
-from tkinter import ttk
-from Objects import tenno
 from commonattributes import Commonattributes
 
 class Commonmethods:
@@ -49,7 +45,71 @@ class Commonmethods:
         except Exception as error:
             print('Something went wrong :< - ' + str(error))
 
-    def writeFile(self, user_profile: Objects.tenno.Tenno):
+    async def parseTest2(self):
+        try:
+            print('Starting parseTest2...')
+            find_module = require('./node_modules/warframe-items/utilities/find.mjs')
+            if find_module is None:
+                print('Did not successfully pull the find module.')
+                return
+            else:
+                print('Successfully pulled find module.')
+                print('Data type of find_module: ' + str(type(find_module)))
+                data = await find_module.findItem('/Lotus/Powersuits/Excalibur/ExcaliburPrime')
+                if data is None:
+                    print('Data retrival was unsuccessful.')
+                    return
+                else:
+                    print('Data retrival successfull!')
+                    print('This is the unparsed data: ' + str(data))
+                    parsed_data = json.loads(data)
+                    if parsed_data is None:
+                        print('Did not successfully parse data.')
+                        return
+                    else:
+                        print('Successfully parsed data.')
+                        print('This is the parsed data: ' + str(parsed_data))
+                        print('Yay!')
+        except Exception as error:
+            print('Something went very wrong... ' + str(error))
+
+    async def parseTest3(self):
+        print('Starting parseTest3...')
+        try:
+            returned_item = await self.execute_js_with_node('./jsgrabber.js', '/Lotus/Powersuits/Excalibur/ExcaliburPrime')
+            if returned_item is None:
+                print('Did not get a returned item.')
+            else:
+                print('Successfully got a returned item!')
+                print('Here is the unparsed data ----')
+                print(returned_item)
+                print('----')
+                parsed_item = json.loads(returned_item)
+                if parsed_item is None:
+                    print('Did not parse the returned item.')
+                else:
+                    print('Item successfully parsed!')
+                    print('Here is the parsed data ----')
+                    print(parsed_item)
+                    print('----')
+                    print('Yay!')
+        except Exception as error:
+            print('Something went wrong :(')
+            print(str(error))
+        pass
+
+    def execute_js_with_node(self, js_file, *args) -> json:
+        process = subprocess.Popen(['node', '-e', js_file, *args], stdout = subprocess.PIPE,
+            stderr = subprocess.PIPE)
+        stdout, stderr = process.communicate()
+
+        if stderr:
+            raise Exception(f'Error in executing JavaScript: {stderr.decode()}')
+
+        print(stdout.decode().strip())
+        return stdout.decode().strip()
+
+    def writeFile(self, user_profile: tenno.Tenno):
         try:
             up_file = open('user_profile_file', 'wb')
             pickle.dump(user_profile, up_file)
@@ -57,7 +117,7 @@ class Commonmethods:
         except Exception as error:
             print(f"Error in writing file: {error}")
 
-    def loadFile(self) -> Objects.tenno.Tenno:
+    def loadFile(self) -> tenno.Tenno:
         try:
             up_file = open('user_profile_file', 'rb')
             user_profile = pickle.load(up_file)

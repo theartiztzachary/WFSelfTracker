@@ -57,6 +57,13 @@ class Warframe:
         base_armor: int
         energy_max: int
 
+        ## temp until we get API working --
+        hit_points = 0
+        shield_max = 0
+        base_armor = 0
+        energy_max = 0
+        ## --
+
         self.base_stats = {
             "Health" : hit_points,
             "Shields" : shield_max,

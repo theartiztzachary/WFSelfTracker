@@ -8,7 +8,7 @@ class Commonattributes:
         'ash' : '/Lotus/Powersuits/Ninja/Ninja',
         'ash_prime' : '/Lotus/Powersuits/Ninja/AshPrime',
         'atlus' : '/Lotus/Powersuits/Brawler/Brawler',
-        'atlus_prime' : 'uniqueName":"/Lotus/Powersuits/Brawler/AtlasPrime',
+        'atlus_prime' : '/Lotus/Powersuits/Brawler/AtlasPrime',
         # B
         'banshee' : '/Lotus/Powersuits/Banshee/Banshee',
         'banshee_prime' : '/Lotus/Powersuits/Banshee/BansheePrime',
@@ -174,13 +174,13 @@ class Commonattributes:
 
             current_loop = 0
             frame = ''
-            current_frame = self.warframe_identifiers[key]
+            current_frame = key
             current_frame_as_list = current_frame.split('_')
             for word in current_frame_as_list:
-                frame += word.capitalize()
                 if current_loop == 1:
                     frame += ' '
 
+                frame += word.capitalize()
                 current_loop += 1
 
             self.warframe_list.append(frame)

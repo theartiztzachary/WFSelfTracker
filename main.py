@@ -1,4 +1,4 @@
-import faulthandler
+import faulthandler, subprocess, os
 from tkinter import *
 from tkinter import ttk
 from commonattributes import Commonattributes

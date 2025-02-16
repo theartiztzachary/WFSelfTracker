@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "path": "^0.12.7",
+    "stream": "^0.0.3",
     "warframe-items": "^1.1266.26"
-  }
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.1"
+  },
+  "type": "module"
 }
