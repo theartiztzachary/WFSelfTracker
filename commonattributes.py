@@ -2,6 +2,7 @@ class Commonattributes:
 
     pages : dict
     polarities = ['Madurai', 'Vazarin', 'Naramon', 'Zenurik', 'Unairu', 'Penjaga', 'Umbra', 'Omni']
+    warframe_list: list
     warframe_identifiers = {
         # A
         'ash' : '/Lotus/Powersuits/Ninja/Ninja',
@@ -20,7 +21,7 @@ class Commonattributes:
         'chroma_prime' : '/Lotus/Powersuits/Dragon/ChromaPrime',
         'citrine' : '/Lotus/Powersuits/Geode/Geode',
         'citrine_prime' : 'none',
-        'cyte_09_identifier' : '/Lotus/Powersuits/Frumentarius/Frumentarius',
+        'cyte_09' : '/Lotus/Powersuits/Frumentarius/Frumentarius',
         'cyte_09_prime' : 'none',
         # D
         'dagath' : '/Lotus/Powersuits/Dagath/Dagath',
@@ -73,7 +74,7 @@ class Commonattributes:
         'kullervo_prime' : 'none',
         # L
         'lavos' : '/Lotus/Powersuits/Alchemist/Alchemist',
-        'lavos_prime' : 'none', # soon tm
+        'lavos_prime' : '/Lotus/Powersuits/Alchemist/LavosPrime',
         'limbo' : '/Lotus/Powersuits/Magician/Magician',
         'limbo_prime' : '/Lotus/Powersuits/Magician/LimboPrime',
         'loki_identifier' : '/Lotus/Powersuits/Loki/Loki',
@@ -165,3 +166,21 @@ class Commonattributes:
 
     def __init__(self):
         self.pages = {}
+        self.warframe_list = ['Select One']
+
+        for key in self.warframe_identifiers.keys():
+            if self.warframe_identifiers[key] == 'none':
+                continue
+
+            current_loop = 0
+            frame = ''
+            current_frame = self.warframe_identifiers[key]
+            current_frame_as_list = current_frame.split('_')
+            for word in current_frame_as_list:
+                frame += word.capitalize()
+                if current_loop == 1:
+                    frame += ' '
+
+                current_loop += 1
+
+            self.warframe_list.append(frame)

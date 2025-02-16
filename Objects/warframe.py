@@ -4,8 +4,8 @@ from Objects import wfability, modslot, arcane
 class Warframe:
 
     name: str
+    note_name = ''
     #icon
-    is_prime: bool
     base_stats: dict
 
     first_ability: wfability
@@ -38,11 +38,10 @@ class Warframe:
     chassis_location: str
     systems_location: str
 
-    def __init__(self, name: str, is_prime: bool):
+    def __init__(self, name: str):
         self.name = name
-        self.is_prime = is_prime
 
-        self.setBaseStats(name, is_prime)
+        self.setBaseStats(name)
         self.setAbilities(name)
 
         self.has_potato = False
@@ -51,7 +50,7 @@ class Warframe:
     def __int__(self):
         pass
 
-    def setBaseStats(self, name: str, is_prime: bool):
+    def setBaseStats(self, name: str):
         # API call using the Warframe's name (and whatever else I need) to pull base stats
         hit_points: int
         shield_max: int

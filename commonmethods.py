@@ -3,6 +3,9 @@ import pickle
 import os
 import Objects.tenno
 from pythonmonkey import require
+from tkinter import *
+from tkinter import ttk
+from Objects import tenno
 from commonattributes import Commonattributes
 
 class Commonmethods:
@@ -60,6 +63,8 @@ class Commonmethods:
             user_profile = pickle.load(up_file)
             up_file.close()
             return user_profile
+        except AttributeError:
+            return None
         except Exception as error:
             print(f"Error in loading file: {error}")
 
@@ -68,3 +73,7 @@ class Commonmethods:
             os.remove('user_profile_file')
         else:
             print("User file does not exist.")
+
+    def cleanPage(self, mainframe: Frame):
+        for child in mainframe.winfo_children():
+            child.destroy()

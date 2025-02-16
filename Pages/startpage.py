@@ -10,7 +10,7 @@ user: tenno.Tenno
 user_loaded: tenno.Tenno
 
 class Startpage:
-    def __init__(self, parent, common_attributes_object: Commonattributes):
+    def __init__(self, parent: Tk, common_attributes_object: Commonattributes):
         self.common_methods_object = Commonmethods(common_attributes_object)
         self.common_attributes_object = common_attributes_object
         self.mainframe = ttk.Frame(parent, padding = "3 3 12 12")
